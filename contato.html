@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça o formulário demonstrativo de contato da comunidade Sports Central.">
+    <title>Contato | Sports Central</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <a class="link-pular" href="#inicio">Pular para o conteúdo principal</a>
+    <header>
+        <a href="index.html" aria-label="Sports Central - página inicial"><strong>Sports Central</strong></a>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contato.html" aria-current="page">Contato</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="inicio" tabindex="-1">
+        <section aria-labelledby="contato-titulo">
+            <h1 id="contato-titulo">Entre em contato</h1>
+            <p>Use este espaço para sugestões e dúvidas sobre as atividades da comunidade.</p>
+            <p id="aviso-contato">Formulário demonstrativo indisponível nesta versão. Nenhuma mensagem será enviada.</p>
+            <form id="form-contato" aria-describedby="aviso-contato">
+                <div>
+                    <label for="nome">Nome (obrigatório)</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name" required>
+                </div>
+                <div>
+                    <label for="email">E-mail (obrigatório)</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div>
+                    <label for="mensagem">Mensagem (obrigatória)</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit" disabled>Enviar mensagem</button>
+                <p id="resultado-formulario" role="status"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Sports Central. Projeto acadêmico demonstrativo.</p>
+        <p>Serviços, eventos e locais fictícios, sem inscrições reais.</p>
+    </footer>
+</body>
+</html>
