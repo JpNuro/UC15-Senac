@@ -135,6 +135,10 @@ input, textarea {
 }
 input::placeholder, textarea::placeholder { color: var(--color-text-muted); opacity: 1; }
 textarea { resize: vertical; }
+.erro-campo { margin-top: var(--space-2); margin-bottom: 0; color: var(--color-danger); }
+[aria-invalid="true"] { border-color: var(--color-danger); border-width: 2px; }
+#resultado-formulario { margin-top: var(--space-4); margin-bottom: 0; }
+.grade-eventos { margin-top: var(--space-4); }
 button {
     max-width: 100%;
     min-height: 2.75rem;

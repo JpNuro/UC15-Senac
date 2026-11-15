@@ -25,3 +25,5 @@ A declaração não substitui a responsabilidade por compreender, explicar, test
 ## Apoio em 15/11/2026
 
 A partir dos parâmetros e das revisões do estudante, a ferramenta prestou apoio técnico à reorganização do CSS, integração local de Bootstrap/jQuery e verificações automatizadas de layout e interação. O estudante orienta o trabalho e revisa as alterações; os testes automatizados realizados pela ferramenta são identificados separadamente dos testes manuais em TESTES.md. O planejamento e a documentação acompanham o que foi efetivamente executado.
+
+O apoio técnico de 15/11 também abrangeu os scripts de validação e simulação de contato, pesquisa de eventos e testes automatizados dessas funções. As decisões de escopo e os critérios partiram do estudante; as alterações produzidas com a ferramenta estão documentadas em IMPLEMENTACAO.md para leitura, revisão e estudo.

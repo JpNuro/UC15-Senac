@@ -25,6 +25,13 @@
         <section aria-labelledby="eventos-titulo">
             <h1 id="eventos-titulo">Eventos da comunidade</h1>
             <p>Atividades para conhecer pessoas e praticar esportes no bairro. Todos os eventos e locais são fictícios.</p>
+            <div class="filtro-noticias">
+                <label for="buscar-evento">Buscar evento</label>
+                <input type="search" id="buscar-evento" placeholder="Título, modalidade ou local"
+                    aria-controls="lista-eventos" aria-describedby="resultado-eventos" disabled>
+                <p id="resultado-eventos" role="status">3 eventos disponíveis.</p>
+            </div>
+            <noscript><p>Ative o JavaScript para pesquisar. Todos os eventos estão listados abaixo.</p></noscript>
             <div id="lista-eventos" class="grade-eventos">
                 <article data-modalidade="futebol">
                     <h2>Futebol na praça</h2>
@@ -52,5 +59,6 @@
         <p>&copy; 2026 Sports Central. Projeto acadêmico demonstrativo.</p>
         <p>Serviços, eventos e locais fictícios, sem inscrições reais.</p>
     </footer>
+    <script src="js/eventos.js" defer></script>
 </body>
 </html>

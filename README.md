@@ -4,7 +4,7 @@ Portal demonstrativo de serviços, eventos e notícias de uma comunidade esporti
 
 ## Estado atual — 15/11/2026
 
-Versão intermediária `0.1.0`, com a base inicial e o layout do segundo commit da recuperação. Há quatro páginas na raiz: início, eventos, contato e favoritos. O filtro de notícias usa jQuery; favoritos usam JavaScript e `localStorage`. A página de eventos apresenta o catálogo; a pesquisa será acrescentada em 15/11. O contato permanece com envio desabilitado até implementar a validação e simulação na mesma data.
+Versão intermediária `0.2.0`, com as etapas de layout e interações de 15/11 concluídas. Há quatro páginas na raiz: início, eventos, contato e favoritos. O filtro de notícias usa jQuery; favoritos usam JavaScript e `localStorage`. A pesquisa de eventos aceita título, modalidade e local sem diferenciar acentos ou maiúsculas. O contato valida nome, e-mail e mensagem, mostra erros por campo e simula envio sem recarregar nem armazenar dados pessoais. Sem JavaScript, o botão permanece desabilitado.
 
 Não há backend, banco de dados, APIs externas ou CMS. Nenhum dado de contato será armazenado ou enviado.
 
@@ -29,10 +29,10 @@ O servidor Python serve toda a pasta, inclusive documentos; não o exponha à re
 ## Organização
 
 - `index.html`: apresentação, serviços e notícias, calendário e classificação demonstrativos.
-- `eventos.html`: catálogo de atividades comunitárias.
-- `contato.html`: estrutura do formulário demonstrativo.
+- `eventos.html`: catálogo de atividades comunitárias com pesquisa.
+- `contato.html`: formulário acessível com validação e envio simulado.
 - `favoritos.html`: notícias salvas no navegador.
-- `assets/css/style.css`, `assets/img/` e `js/app.js`: estilos, imagens e interações reaproveitados.
+- `assets/css/style.css`, `assets/img/` e `js/app.js`: estilos, imagens e interações reaproveitados. `js/contato.js` e `js/eventos.js` isolam as novas funções por página.
 - `scripts/servir.mjs`: servidor local sem dependências de produção.
 
 O material do professor em `aula-frontend-mobile-limpo/`, o enunciado original e `texto.md` são fontes locais de consulta ignoradas pelo Git. Não fazem parte do portal a publicar.

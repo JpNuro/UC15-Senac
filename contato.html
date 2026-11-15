@@ -25,19 +25,23 @@
         <section aria-labelledby="contato-titulo">
             <h1 id="contato-titulo">Entre em contato</h1>
             <p>Use este espaço para sugestões e dúvidas sobre as atividades da comunidade.</p>
-            <p id="aviso-contato">Formulário demonstrativo indisponível nesta versão. Nenhuma mensagem será enviada.</p>
+            <p id="aviso-contato">Formulário demonstrativo: o envio é simulado. Seus dados não são enviados nem armazenados.</p>
+            <noscript><p>Ative o JavaScript para experimentar o formulário demonstrativo.</p></noscript>
             <form id="form-contato" aria-describedby="aviso-contato">
                 <div>
                     <label for="nome">Nome (obrigatório)</label>
-                    <input type="text" id="nome" name="nome" autocomplete="name" required>
+                    <input type="text" id="nome" name="nome" autocomplete="name" aria-describedby="erro-nome" required>
+                    <p id="erro-nome" class="erro-campo" hidden></p>
                 </div>
                 <div>
                     <label for="email">E-mail (obrigatório)</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <input type="email" id="email" name="email" autocomplete="email" aria-describedby="erro-email" required>
+                    <p id="erro-email" class="erro-campo" hidden></p>
                 </div>
                 <div>
                     <label for="mensagem">Mensagem (obrigatória)</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    <textarea id="mensagem" name="mensagem" rows="5" aria-describedby="erro-mensagem" required></textarea>
+                    <p id="erro-mensagem" class="erro-campo" hidden></p>
                 </div>
                 <button type="submit" disabled>Enviar mensagem</button>
                 <p id="resultado-formulario" role="status"></p>
@@ -48,5 +52,6 @@
         <p>&copy; 2026 Sports Central. Projeto acadêmico demonstrativo.</p>
         <p>Serviços, eventos e locais fictícios, sem inscrições reais.</p>
     </footer>
+    <script src="js/contato.js" defer></script>
 </body>
 </html>
