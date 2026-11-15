@@ -1,0 +1,13 @@
+{
+  "name": "sports-central-uc15",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Portal demonstrativo da comunidade esportiva — recuperação UC15.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/servir.mjs"
+  }
+}
