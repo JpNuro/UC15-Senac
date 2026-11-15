@@ -84,7 +84,7 @@ As correções abaixo correspondem à base inicial de 14/11/2026. Conferência e
 ## Ocorrências adicionais a resolver
 
 - Os scripts próprios aparecem antes de jQuery no esqueleto; se usados imediatamente, podem executar antes da biblioteca. A base reaproveitada já carrega jQuery antes de app.js. Conferir novamente após integrar as cópias locais.
-- O esqueleto referencia `js/bootstrap.min.js`, mas a estrutura exige `js/bootstrap.bundle.min.js`. O bundle local será integrado em 15/11 junto ao accordion, com a licença preservada. Não declarar essa correção concluída nesta etapa.
+- O esqueleto referencia `js/bootstrap.min.js`, mas a estrutura exige `js/bootstrap.bundle.min.js`. Correção concluída em 15/11: bundle local em assets/vendor/bootstrap.bundle.min.js, usado no accordion, com licença preservada.
 
 ## Cuidados de interpretação
 

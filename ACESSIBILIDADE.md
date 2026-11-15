@@ -21,3 +21,7 @@ Os estilos de foco, cores e preferência por movimento reduzido foram reaproveit
 | Imagens | Conferir finalidade, alt e conteúdo visual | Alternativas adequadas e dimensões corretas | Pendente |
 
 Registrar navegador, data, etapa testada, resultado e reteste após as correções. Não substituir zoom real por simples mudança de viewport.
+
+## Atualização de 15/11/2026 — layout
+
+CSS com foco global, bordas de campos mais contrastantes, navegação com alvos de pelo menos 44 px de altura e preferência por movimento reduzido preservada. Chromium headless confirmou ausência de overflow nas quatro páginas em 320, 768 e 1280 px. Accordion testado por Enter/Espaço, com estado aria-expanded coerente. Resultados automatizados em TESTES.md; a tabela de verificações manuais não está automaticamente aprovada.

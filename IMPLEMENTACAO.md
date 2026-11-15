@@ -37,3 +37,11 @@ Inspeção estrutural das quatro páginas aprovada, com 40 referências locais v
 ## Próximas atualizações
 
 Após cada etapa do cronograma, registrar aqui o comportamento entregue, o motivo das escolhas, validações e limitações. Não registrar itens futuros como concluídos. O detalhe dos resultados fica em TESTES e ACESSIBILIDADE para evitar divergências entre relatos.
+
+## 15/11/2026 — layout e dependências (commit 2)
+
+CSS reorganizado em base mobile first e expansões em 768 e 1024 px. Removidas regras antigas duplicadas, regras de campos do cadastro retirado e container query que tentava estilizar o próprio contêiner. Flexbox organiza a navegação e Grid distribui notícias, eventos e favoritos. Os eventos têm uma, duas ou três colunas conforme o espaço. O foco agora é visível também em botões fora do formulário; as bordas de controles receberam maior contraste.
+
+Bootstrap 5.3.8 e jQuery 4.0.0 foram copiados do material das aulas para assets/vendor, com licenças MIT preservadas. Não há mais chamadas a CDN no HTML. Um accordion de perguntas frequentes na página inicial demonstra Bootstrap: apenas o bundle controla a expansão, via atributos data-bs. O filtro de notícias continua isolado em jQuery.
+
+Node 24.22.1 e Playwright foram encontrados no runtime local. Foi baixado Chromium Headless Shell para a pasta .cache ignorada pelo Git. O servidor Node foi executado e os testes pontuais passaram em 12 combinações de página/largura (320, 768 e 1280 px), sem overflow. Confirmadas as colunas dos eventos, accordion com Enter/Espaço e filtro jQuery, sem erros JS ou respostas HTTP de erro. Capturas de início mobile e eventos desktop foram inspecionadas. Isso não substitui zoom real, leitor de tela ou testes manuais pelo estudante.
