@@ -27,7 +27,7 @@ const servidor = createServer(async (requisicao, resposta) => {
         const arquivo = resolve(raiz, caminho);
         // Só recursos do portal são servidos; documentos e metadados Git ficam fora.
         const permitido = paginas.has(caminho)
-            || caminho.startsWith("assets/") || caminho.startsWith("js/");
+            || ["css", "js", "img"].some((pasta) => arquivo.startsWith(resolve(raiz, pasta) + sep));
         if (!permitido || !arquivo.startsWith(raiz + sep) || !tipos[extname(arquivo)]) {
             resposta.writeHead(404).end("Recurso não encontrado.");
             return;
