@@ -1,68 +1,72 @@
 # Sports Central — recuperação UC15
 
-Portal demonstrativo de serviços, eventos e notícias de uma comunidade esportiva. Todos os serviços, locais, notícias, jogos e resultados são fictícios; não há inscrições nem atendimento real.
+Portal mobile first de serviços, eventos e notícias de uma comunidade esportiva. Conteúdos e locais fictícios, sem inscrições nem atendimento real. Projeto exclusivamente de interface, sem backend, banco, APIs externas ou CMS.
 
-## Estado atual — 15/11/2026
+## Estado atual — 16/11/2026
 
-Versão intermediária `0.2.0`, com as etapas de layout e interações de 15/11 concluídas. Há quatro páginas na raiz: início, eventos, contato e favoritos. O filtro de notícias usa jQuery; favoritos usam JavaScript e `localStorage`. A pesquisa de eventos aceita título, modalidade e local sem diferenciar acentos ou maiúsculas. O contato valida nome, e-mail e mensagem, mostra erros por campo e simula envio sem recarregar nem armazenar dados pessoais. Sem JavaScript, o botão permanece desabilitado.
+Versão 0.3.0. Quatro páginas navegáveis, layout a partir de 320 px, accordion Bootstrap, pesquisa de notícias com jQuery, pesquisa de eventos com JavaScript, contato validado com envio simulado e favoritos no navegador. As imagens têm versões WebP e srcset/sizes, incluindo os favoritos. Publicação HTTPS e tag final estão previstas para 17/11.
 
-Não há backend, banco de dados, APIs externas ou CMS. Nenhum dado de contato será armazenado ou enviado.
+## Organização
 
-## Execução local
+```text
+UC15-Senac/
+├── index.html
+├── eventos.html
+├── contato.html
+├── favoritos.html
+├── css/
+│   ├── bootstrap.min.css
+│   └── style.css
+├── js/
+│   ├── jquery.min.js
+│   ├── bootstrap.bundle.min.js
+│   ├── script.js
+│   ├── contato.js
+│   └── eventos.js
+├── img/                 # WebP de 400, 800 e 1200 px; fontes SVG em fontes/
+├── docs/                # planejamento, decisões, implementação e licenças
+├── scripts/servir.mjs
+├── README.md
+├── TESTES.md
+├── ACESSIBILIDADE.md
+├── AUDITORIA.md
+├── IA.md
+├── package.json
+└── .gitignore
+```
 
-Com Node.js 22 ou superior:
+`tests/portal.spec.js` e a configuração Playwright entram no próximo commit de hoje. Os arquivos adicionais têm responsabilidades próprias; a organização de CSS, JS, imagens e documentos obrigatórios segue o modelo do enunciado.
+
+## Executar
+
+Com Node.js 22 ou superior instalado e disponível no PATH:
 
 ```sh
 npm start
 ```
 
-Abra **http://127.0.0.1:4321**. Encerre com Ctrl+C. Não há dependências npm nesta etapa; não é necessário instalar pacotes para iniciar o servidor. Node/npm não estão no PATH desta sessão; o servidor foi verificado usando Node 24.22.1 localizado no runtime. Em outra máquina, instale Node 22 ou superior para usar o comando acima.
+Abra http://127.0.0.1:4321 e encerre com Ctrl+C. O servidor não exige dependências de produção e só disponibiliza páginas e recursos de css/, js/ e img/. Nesta máquina foi usado Node 24.22.1 do runtime local; não foi alterada a instalação global.
 
-Alternativa temporária com Python 3, apenas na máquina local:
+## Interações e limites
 
-```sh
-python -m http.server 4321 --bind 127.0.0.1
-```
+- Bootstrap 5.3.8 controla exclusivamente o accordion; jQuery 4.0.0 controla exclusivamente o filtro de notícias. Bibliotecas locais, com licenças MIT em docs/licencas/.
+- Contato valida campos obrigatórios e e-mail; mostra erros associados, foca o primeiro inválido e anuncia o resultado. Não envia nem armazena dados pessoais.
+- Pesquisa de eventos ignora maiúsculas e acentos, anuncia a quantidade e restaura a lista ao limpar.
+- Favoritos usam sportsCentralFavoritos no localStorage. Itens da versão anterior são compatíveis quando válidos; endereços de imagens armazenados não são reutilizados. A persistência depende do mesmo navegador e origem e não sincroniza dispositivos. JSON inválido pode ser substituído por uma nova seleção; falhas de acesso ou gravação são anunciadas sem sucesso falso.
+- Sem JavaScript, as páginas e o catálogo continuam disponíveis, mas pesquisa, favoritos e simulação de contato ficam indisponíveis.
 
-O servidor Python serve toda a pasta, inclusive documentos; não o exponha à rede. Para comparar favoritos, mantenha o mesmo navegador e a mesma origem (protocolo, domínio e porta). Evite usar abertura direta por `file://` para verificar persistência.
+## Imagens: origem, licença e otimização
 
-## Organização
+As fotografias antigas não tinham licença comprovada e foram retiradas da entrega. Foram substituídas por cinco ilustrações geométricas criadas para este repositório: estádio, futebol, treinamento, basquete e automobilismo. Fontes editáveis em img/fontes/, licenciadas sob MIT junto ao projeto, conforme LICENSE. Não são fotografias de eventos reais.
 
-- `index.html`: apresentação, serviços e notícias, calendário e classificação demonstrativos.
-- `eventos.html`: catálogo de atividades comunitárias com pesquisa.
-- `contato.html`: formulário acessível com validação e envio simulado.
-- `favoritos.html`: notícias salvas no navegador.
-- `assets/css/style.css`, `assets/img/` e `js/app.js`: estilos, imagens e interações reaproveitados. `js/contato.js` e `js/eventos.js` isolam as novas funções por página.
-- `scripts/servir.mjs`: servidor local sem dependências de produção.
+As quinze versões WebP (400×225, 800×450 e 1200×675) somam 93.724 bytes. srcset oferece as alternativas; sizes descreve o espaço ocupado pela imagem de destaque ou pelos cards. O CSS continua responsável pelo layout. As dimensões width/height reservam a proporção 16:9; notícias e favoritos usam carregamento adiado.
 
-O material do professor em `aula-frontend-mobile-limpo/`, o enunciado original e `texto.md` são fontes locais de consulta ignoradas pelo Git. Não fazem parte do portal a publicar.
+## Validação e documentação
 
-## Tecnologias e limites
+Resultados reais e pendências em [TESTES.md](TESTES.md) e [ACESSIBILIDADE.md](ACESSIBILIDADE.md). A suíte reproduzível será adicionada no commit 5. [AUDITORIA.md](AUDITORIA.md) registra as inconsistências do esqueleto; [IA.md](IA.md) declara o apoio utilizado.
 
-HTML semântico, CSS próprio, JavaScript no navegador, Bootstrap 5.3.8 e jQuery 4.0.0. As bibliotecas são locais, em `assets/vendor/`, com licenças preservadas do material das aulas. O accordion de perguntas frequentes usa o bundle Bootstrap; o filtro de notícias usa jQuery. Nenhuma dessas interações depende de CDN.
-
-Favoritos são locais ao navegador e não sincronizam entre dispositivos. A validação dos itens armazenados e o foco após remoção serão revisados em 16/11. Não há comprovação de conformidade integral de acessibilidade, compatibilidade ou desempenho.
-
-## Imagens e licenças
-
-As cinco imagens JPG foram reaproveitadas do projeto anterior. A origem e a licença individual ainda **não foram comprovadas**. Elas devem ser comprovadas ou substituídas antes da publicação final; a licença MIT do código não comprova licença dessas fotografias.
-
-| Arquivo em `assets/img/` | Origem/licença | Situação |
-| --- | --- | --- |
-| estadio-destaque.jpg | Pendente | Não liberada para entrega final |
-| noticia-internacional.jpg | Pendente | Não liberada para entrega final |
-| noticia-treinamento.jpg | Pendente | Não liberada para entrega final |
-| noticia-basquete.jpg | Pendente | Não liberada para entrega final |
-| noticia-formula-1.jpg | Pendente | Não liberada para entrega final |
-
-Código do projeto sob MIT, conforme `LICENSE`. As licenças MIT das bibliotecas estão em `assets/vendor/bootstrap-LICENSE.txt` e `assets/vendor/jquery-LICENSE.txt`.
-
-## Testes e acompanhamento
-
-Consulte [TESTES.md](TESTES.md), [ACESSIBILIDADE.md](ACESSIBILIDADE.md) e [AUDITORIA.md](AUDITORIA.md). Nesta etapa não há suíte Playwright nem comando `npm test`. Em 16/11 serão adicionados a dependência de desenvolvimento, lockfile, configuração e casos; as instruções finais incluirão `npm ci`, `npx playwright install chromium` e `npm test`.
-
-O calendário está em [PLANEJAMENTO.md](PLANEJAMENTO.md); as mudanças e motivos, em [IMPLEMENTACAO.md](IMPLEMENTACAO.md); decisões técnicas, em [DECISOES.md](DECISOES.md); declaração de apoio, em [IA.md](IA.md).
+Documentos complementares: [planejamento](docs/PLANEJAMENTO.md), [decisões](docs/DECISOES.md) e [implementação e motivos](docs/IMPLEMENTACAO.md). Registros históricos de testes e acessibilidade estão em docs/ e não substituem a avaliação da versão atual.
 
 ## Publicação e entrega
 
-**URL HTTPS: pendente.** Publicação prevista para 17/11, preferencialmente pelo GitHub Pages, servindo somente os quatro HTMLs e recursos do portal. Não publicar a pasta inteira com materiais de consulta. Criar a tag `v1.0.0` no commit final após validar a URL. A versão atual não é a entrega final.
+URL HTTPS e tag v1.0.0: pendentes. A publicação deve conter apenas os HTMLs e css/, js/ e img/; o pacote de entrega também inclui documentação e testes, sem .git, node_modules ou cache. Fontes locais de consulta (aula-frontend-mobile-limpo/, enunciado e texto.md) são ignoradas pelo Git e não fazem parte da publicação.

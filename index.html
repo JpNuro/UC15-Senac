@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça serviços, eventos e notícias da comunidade esportiva Sports Central.">
     <title>Sports Central | Comunidade esportiva</title>
-    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -32,10 +32,12 @@
                 Este portal é uma demonstração acadêmica: os conteúdos e locais são fictícios.
             </p>
 
-            <article>
+            <article data-id="destaque-da-semana">
                 <h2>Destaque da semana</h2>
-                <img class="imagem-destaque" src="assets/img/estadio-destaque.jpg" width="1200" height="675"
-                    alt="Estádio de futebol iluminado durante uma partida noturna" fetchpriority="high">
+                <img class="imagem-destaque" src="img/estadio-destaque-800.webp"
+                    srcset="img/estadio-destaque-400.webp 400w, img/estadio-destaque-800.webp 800w, img/estadio-destaque-1200.webp 1200w"
+                    sizes="(min-width: 1184px) 1118px, calc(100vw - 66px)"
+                    width="1200" height="675" alt="Ilustração de um estádio com campo de futebol e refletores" fetchpriority="high">
                 <p>
                     O campeonato chega a uma rodada decisiva,
                     com equipes disputando as primeiras posições.
@@ -61,6 +63,8 @@
             <a href="eventos.html">Conheça as atividades da comunidade</a>
         </section>
 
+        <p id="status-favoritos" role="status"></p>
+
         <section id="noticias" aria-labelledby="noticias-titulo">
             <h2 id="noticias-titulo">Últimas notícias</h2>
 
@@ -73,9 +77,11 @@
                 </p>
             </div>
 
-            <article class="card">
-                <img class="imagem-noticia" src="assets/img/noticia-internacional.jpg" width="800" height="450"
-                    alt="Jogadores de futebol comemorando juntos em campo" loading="lazy" decoding="async">
+            <article class="card" data-id="internacional-vence-em-jogo-disputado">
+                <img class="imagem-noticia" src="img/noticia-internacional-800.webp"
+                    srcset="img/noticia-internacional-400.webp 400w, img/noticia-internacional-800.webp 800w, img/noticia-internacional-1200.webp 1200w"
+                    sizes="(min-width: 1184px) 534px, (min-width: 768px) calc(50vw - 58px), calc(100vw - 66px)"
+                    width="1200" height="675" alt="Ilustração de uma bola de futebol sobre um campo" loading="lazy" decoding="async">
                 <h3>Internacional vence em jogo disputado</h3>
                 <p>
                     A equipe conquistou três gols após uma partida
@@ -87,9 +93,11 @@
                 </button>
             </article>
 
-            <article class="card">
-                <img class="imagem-noticia" src="assets/img/noticia-treinamento.jpg" width="800" height="450"
-                    alt="Jogadores realizando treinamento de futebol em um campo" loading="lazy" decoding="async">
+            <article class="card" data-id="preparacao-para-a-proxima-rodada">
+                <img class="imagem-noticia" src="img/noticia-treinamento-800.webp"
+                    srcset="img/noticia-treinamento-400.webp 400w, img/noticia-treinamento-800.webp 800w, img/noticia-treinamento-1200.webp 1200w"
+                    sizes="(min-width: 1184px) 534px, (min-width: 768px) calc(50vw - 58px), calc(100vw - 66px)"
+                    width="1200" height="675" alt="Ilustração de cones organizados para treino em um campo de futebol" loading="lazy" decoding="async">
                 <h3>Preparação para a próxima rodada</h3>
                 <p>
                     Os clubes intensificam os treinamentos para os
@@ -100,10 +108,11 @@
                     ☆ Favoritar notícia
                 </button>
             </article>
-            <article class="card">
-                <img class="imagem-noticia" src="assets/img/noticia-basquete.jpg" width="800" height="450"
-                    alt="Jogadores disputando a posse de bola em uma partida de basquete" loading="lazy"
-                    decoding="async">
+            <article class="card" data-id="basquete-confronto-promete-equilibrio-ate-o-fim">
+                <img class="imagem-noticia" src="img/noticia-basquete-800.webp"
+                    srcset="img/noticia-basquete-400.webp 400w, img/noticia-basquete-800.webp 800w, img/noticia-basquete-1200.webp 1200w"
+                    sizes="(min-width: 1184px) 534px, (min-width: 768px) calc(50vw - 58px), calc(100vw - 66px)"
+                    width="1200" height="675" alt="Ilustração de uma bola de basquete sobre uma quadra" loading="lazy" decoding="async">
 
                 <h3>Basquete: confronto promete equilíbrio até o fim</h3>
 
@@ -120,9 +129,11 @@
                     ☆ Favoritar notícia
                 </button>
             </article>
-            <article class="card">
-                <img class="imagem-noticia" src="assets/img/noticia-formula-1.jpg" width="800" height="450"
-                    alt="Carro de corrida percorrendo uma pista de automobilismo" loading="lazy" decoding="async">
+            <article class="card" data-id="formula-1-estrategia-pode-decidir-a-proxima-corrida">
+                <img class="imagem-noticia" src="img/noticia-formula-1-800.webp"
+                    srcset="img/noticia-formula-1-400.webp 400w, img/noticia-formula-1-800.webp 800w, img/noticia-formula-1-1200.webp 1200w"
+                    sizes="(min-width: 1184px) 534px, (min-width: 768px) calc(50vw - 58px), calc(100vw - 66px)"
+                    width="1200" height="675" alt="Ilustração de um carro de corrida em um circuito" loading="lazy" decoding="async">
 
                 <h3>Fórmula 1: estratégia pode decidir a próxima corrida</h3>
 
@@ -232,9 +243,9 @@
         <p>&copy; 2026 Sports Central. Projeto acadêmico demonstrativo.</p>
         <p>Conteúdo esportivo fictício, criado para fins educacionais.</p>
     </footer>
-    <script src="assets/vendor/jquery.min.js" defer></script>
-    <script src="assets/vendor/bootstrap.bundle.min.js" defer></script>
-    <script src="js/app.js" defer></script>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>

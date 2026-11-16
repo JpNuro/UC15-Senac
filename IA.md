@@ -1,29 +1,27 @@
 # Declaração de uso de inteligência artificial
 
-## Ferramenta e apoio
+## Projeto e participação do estudante
 
-Utilizei ChatGPT/Codex como apoio ao planejamento, às correções iniciais e à documentação da recuperação, a partir do meu projeto anterior e dos parâmetros que forneci. Defini os requisitos de organização, o prazo de quatro dias, a distribuição em sete commits e a necessidade de código limpo, com comentários que expliquem escolhas.
+Este trabalho parte do Sports Central, projeto que desenvolvi anteriormente na disciplina e que escolhi como base para a recuperação. Defini o tema da comunidade esportiva, os requisitos de organização, o prazo, a distribuição dos commits e os critérios de legibilidade do código.
 
-Em 14/11/2026, o apoio abrangeu organização do portal na raiz, páginas de eventos e contato, navegação, conteúdo demonstrativo de serviços, ajustes iniciais de CSS, servidor local e documentação. O registro anterior `texto.md` foi consultado como contexto, sem tratá-lo como prova de testes atuais.
+Analisei e aprovei as correções iniciais, fiz novas revisões de código e solicitei ajustes no planejamento. Em 16/11/2026, revisei os códigos e reforcei a necessidade de seguir a estrutura de pastas do professor e usar imagens responsivas com srcset e sizes. Minha participação inclui analisar, modificar o projeto, orientar os ajustes e revisar os resultados.
+
+## Ferramenta e utilização
+
+Utilizei ChatGPT/Codex como apoio, seguindo os parâmetros e as orientações que forneci. O apoio técnico incluiu especialmente:
+
+- **JavaScript:** implementação e revisão das funções de contato, pesquisas e favoritos, incluindo validação, armazenamento, mensagens e foco.
+- **Imagens:** criação de ilustrações geométricas para substituir fotografias sem licença comprovada, com fontes SVG e versões WebP responsivas.
+- **Organização de pastas:** adequação aos diretórios css/, js/ e img/, reorganização dos documentos complementares e atualização dos caminhos.
+
+Também houve apoio na estrutura inicial das páginas, ajustes de CSS, integração das bibliotecas locais, servidor de desenvolvimento, planejamento, documentação e verificações automatizadas. As alterações e seus motivos estão detalhados em docs/IMPLEMENTACAO.md.
 
 ## Revisão e validação
 
-Analisei o código e as correções iniciais e aprovei essa base para a continuidade do projeto. Também fiz novas revisões de código e solicitei a reformulação do planejamento conforme os parâmetros que estabeleci, para orientar minha execução, minhas modificações e minha revisão das próximas etapas.
+Revisei o código e as correções apresentadas e solicitei mudanças quando identifiquei divergências em relação ao enunciado. Os testes executados com apoio da ferramenta, seus resultados e o ambiente estão registrados em TESTES.md; minha revisão de código é identificada separadamente das execuções de navegador.
 
-As verificações executadas e os limites do ambiente constam em TESTES.md. Minha revisão e aprovação do código são distintas dos testes de navegador, que devem ser registrados conforme forem executados.
+Um erro de codificação de caracteres introduzido durante a edição foi identificado por releitura e corrigido com uso explícito de UTF-8. A organização inicial dos recursos também foi revista após minha conferência do modelo do professor. As imagens sem comprovação de licença foram substituídas em vez de receber créditos presumidos.
 
-Durante a implementação, a passagem de texto por um pipeline PowerShell/Python substituiu acentos novos por interrogações. O problema foi identificado por releitura, o pipeline foi configurado para UTF-8 e os trechos foram corrigidos. A validação estrutural deve conferir novamente os textos antes do commit.
+## Responsabilidade pela entrega
 
-## Participação do estudante
-
-Defini o tema de comunidade esportiva, a contagem do commit existente e as quatro datas de trabalho. Estou analisando o código, realizando modificações no projeto e orientando os ajustes necessários. O planejamento elaborado com apoio da ferramenta organiza as tarefas para que eu possa executá-las e revisá-las ao longo dos quatro dias.
-
-Nesta etapa, minha participação incluiu fornecer os parâmetros, revisar e aprovar as correções iniciais e solicitar ajustes no planejamento e na documentação. A ferramenta apoiou a elaboração do plano e as alterações descritas acima; as decisões e a revisão do trabalho continuam sob minha responsabilidade.
-
-A declaração não substitui a responsabilidade por compreender, explicar, testar e modificar o trabalho. Atualizar este arquivo conforme as etapas forem efetivamente concluídas. Não inserir assinaturas ou marcações da ferramenta no código.
-
-## Apoio em 15/11/2026
-
-A partir dos parâmetros e das revisões do estudante, a ferramenta prestou apoio técnico à reorganização do CSS, integração local de Bootstrap/jQuery e verificações automatizadas de layout e interação. O estudante orienta o trabalho e revisa as alterações; os testes automatizados realizados pela ferramenta são identificados separadamente dos testes manuais em TESTES.md. O planejamento e a documentação acompanham o que foi efetivamente executado.
-
-O apoio técnico de 15/11 também abrangeu os scripts de validação e simulação de contato, pesquisa de eventos e testes automatizados dessas funções. As decisões de escopo e os critérios partiram do estudante; as alterações produzidas com a ferramenta estão documentadas em IMPLEMENTACAO.md para leitura, revisão e estudo.
+A utilização da ferramenta não substitui minha responsabilidade por compreender, explicar, testar e modificar o que será apresentado. O código não contém assinaturas da ferramenta. Esta declaração permanece versionada porque é exigida na recuperação; os guias pessoais de estudo ficam fora do Git.

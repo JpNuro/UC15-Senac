@@ -55,3 +55,13 @@ O formulário habilita o botão apenas depois de conectar o tratamento de submit
 A pesquisa de eventos usa o catálogo já presente em HTML, inclusive títulos, descrições, modalidades e locais. A normalização remove diferenças de maiúsculas e acentos; hidden controla visibilidade e a região de status informa a quantidade ou nenhum resultado. Limpar o campo restaura a lista. Sem JavaScript, os três eventos permanecem disponíveis.
 
 A versão passa a 0.2.0. Os testes pontuais de contato, pesquisa, fallback e salto passaram no Chromium; as 12 combinações de layout e o accordion foram testados novamente após as mudanças. Permanecem pendentes a suíte entregue e reproduzível, imagens/licenças, robustez de favoritos e publicação, conforme os próximos dias do plano.
+
+## 16/11/2026 — organização, favoritos e imagens (commit 4)
+
+Aplicada a estrutura do enunciado: css/, js/, img/ e documentos obrigatórios na raiz. app.js renomeado para script.js; servidor, HTML e referências atualizados. Documentos complementares e licenças foram reunidos em docs/. Removidos diretório prototipo vazio e relatório final vazio; a nota antiga de CMS foi arquivada em docs/historico-cms.md.
+
+Favoritos mantêm a chave e os IDs antigos. Dados são validados e deduplicados; textos usam textContent. Imagens vêm de um catálogo conhecido, mesmo se o item antigo guardar um caminho JPG ou uma URL externa. Falhas de acesso e gravação são anunciadas em status e não produzem confirmação falsa. Após remover, o foco passa ao próximo botão, ao anterior ou ao resumo da lista vazia. Outra aba pode atualizar os estados pelo evento storage.
+
+As fotografias sem comprovação de licença saíram da entrega. Foram criadas cinco ilustrações geométricas SVG e rasterizadas com Sharp em WebP de 400, 800 e 1200 px, qualidade 82. Fontes SVG incluídas sob MIT. Quinze arquivos totalizam 93.724 bytes. HTML e favoritos usam srcset/sizes; o navegador escolheu 400 px no mobile e 1200 px no desktop com DPR 1. Não houve alteração por CSS a partir de srcset: CSS e sizes descrevem o mesmo layout para finalidades diferentes.
+
+Testes pontuais de favoritos, falhas, imagens, layout, formulário, filtros e accordion passaram; resultados em TESTES.md. A suíte versionada e executável em clone limpo será incluída no commit 5, também em 16/11. Revisões manuais pelo estudante continuam registradas separadamente.

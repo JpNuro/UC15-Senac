@@ -16,7 +16,7 @@ As correções abaixo correspondem à base inicial de 14/11/2026. Conferência e
 - Localização: `href="css/styles.css"`, enquanto a estrutura indica `css/style.css`.
 - Problema: referência não corresponde ao arquivo previsto.
 - Impacto: os estilos próprios podem não carregar.
-- Correção aplicada: todas as páginas apontam para o arquivo real `assets/css/style.css`, preservado da base. A organização adicional é permitida pela seção 6.
+- Correção aplicada: todas as páginas apontam para o arquivo real `css/style.css`, preservado da base. A organização adicional é permitida pela seção 6.
 
 ## 3 — Destino do link de salto inexistente
 
@@ -84,7 +84,7 @@ As correções abaixo correspondem à base inicial de 14/11/2026. Conferência e
 ## Ocorrências adicionais e acompanhamento
 
 - Os scripts próprios aparecem antes de jQuery no esqueleto; se usados imediatamente, podem executar antes da biblioteca. A base reaproveitada já carrega jQuery antes de app.js. Conferir novamente após integrar as cópias locais.
-- O esqueleto referencia `js/bootstrap.min.js`, mas a estrutura exige `js/bootstrap.bundle.min.js`. Correção concluída em 15/11: bundle local em assets/vendor/bootstrap.bundle.min.js, usado no accordion, com licença preservada.
+- O esqueleto referencia `js/bootstrap.min.js`, mas a estrutura exige `js/bootstrap.bundle.min.js`. Correção concluída em 15/11: bundle local em js/bootstrap.bundle.min.js, usado no accordion, com licença preservada.
 
 ## Cuidados de interpretação
 
@@ -93,3 +93,7 @@ As correções abaixo correspondem à base inicial de 14/11/2026. Conferência e
 ## Validação complementar em 15/11/2026
 
 Formulário passou a tratar submit sem recarga, com erros por campo e status. A substituição da validação nativa só ocorre depois de conectar esse tratamento; required, type=email e rótulos permanecem no HTML. Pesquisa de eventos e accordion foram verificados em navegador automatizado. Resultados e limites estão em TESTES.md.
+
+## Organização e imagens em 16/11/2026
+
+Caminhos alinhados à estrutura da seção 6: css/, js/ e img/. As imagens agora são ilustrações com licença definida, width/height e três versões WebP via srcset/sizes, também nos favoritos. Documentos obrigatórios continuam na raiz e o material complementar em docs/.

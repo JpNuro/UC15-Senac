@@ -14,8 +14,8 @@
 | --- | --- | --- | --- |
 | 14/11 | 1 — inicial, revisto em 15/11 | Portal na raiz, páginas, conteúdo, navegação, auditoria e execução local | Caminhos, âncoras, rótulos e integridade da movimentação |
 | 15/11 | 2 — 736bb5c | CSS a partir de 320 px; breakpoints 768 e 1024 px; Flexbox, Grid; dependências locais; accordion Bootstrap | 320, 768 e 1280 px; teclado no componente |
-| 15/11 | 3 — implementado nesta etapa | Validação de contato e pesquisa de eventos em JS nativo | Campos vazios/espaços, e-mail inválido, sucesso sem recarga; pesquisa vazia/sem resultado |
-| 16/11 | 4 | Robustez dos favoritos, imagens e acessibilidade; preservar filtro jQuery | Armazenamento inválido/indisponível, foco na remoção, imagens e licenças |
+| 15/11 | 3 — e3ff577 | Validação de contato e pesquisa de eventos em JS nativo | Campos vazios/espaços, e-mail inválido, sucesso sem recarga; pesquisa vazia/sem resultado |
+| 16/11 | 4 — concluído nesta etapa | Robustez dos favoritos, imagens e acessibilidade; preservar filtro jQuery | Armazenamento inválido/indisponível, foco na remoção, imagens e licenças |
 | 16/11 | 5 | Playwright, testes manuais e correções | Abertura, navegação, formulário, filtros, favoritos, teclado e responsividade |
 | 17/11 | 6 | Documentação final e preparação da defesa | Registros coerentes com testes reais; suíte completa e estudo da defesa |
 | 17/11 | 7 | Configuração de publicação e pacote final | HTTPS, navegação e conteúdo do pacote |
@@ -49,3 +49,7 @@ Node/npm não foram encontrados no PATH em 14/11. Localizar instalação ou inst
 Etapas 2 e 3 implementadas e verificadas por testes pontuais automatizados de layout, Bootstrap, contato e pesquisa. O commit inicial aplicado na branch compatível com main é ff1f072: o conteúdo foi trabalhado em 14/11, e o commit foi recriado em 15/11 para corrigir o histórico de PR. O estudante explicará essa distinção ao professor. Não alterar datas para simular distribuição.
 
 Node 24.22.1 foi localizado no runtime e usado para executar o servidor; não houve instalação global ou mudança do PATH. A suíte reproduzível, com dependência de desenvolvimento e lockfile, permanece para 16/11.
+
+## Ajuste de organização em 16/11
+
+Atendendo à revisão do estudante, o commit 4 inclui adequação a css/, js/ e img/, documentos complementares em docs/, imagens responsivas com srcset/sizes e robustez dos favoritos. Sem commit adicional ao total de sete. O commit 5 entrega a suíte reproduzível.
