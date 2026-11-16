@@ -13,8 +13,8 @@
 | Data | Commit | Entrega | Verificação antes do commit |
 | --- | --- | --- | --- |
 | 14/11 | 1 — inicial, revisto em 15/11 | Portal na raiz, páginas, conteúdo, navegação, auditoria e execução local | Caminhos, âncoras, rótulos e integridade da movimentação |
-| 15/11 | 2 | CSS a partir de 320 px; breakpoints 768 e 1024 px; Flexbox, Grid; dependências locais; accordion Bootstrap | 320, 768 e 1280 px; teclado no componente |
-| 15/11 | 3 | Validação de contato e pesquisa de eventos em JS nativo | Campos vazios/espaços, e-mail inválido, sucesso sem recarga; pesquisa vazia/sem resultado |
+| 15/11 | 2 — 736bb5c | CSS a partir de 320 px; breakpoints 768 e 1024 px; Flexbox, Grid; dependências locais; accordion Bootstrap | 320, 768 e 1280 px; teclado no componente |
+| 15/11 | 3 — implementado nesta etapa | Validação de contato e pesquisa de eventos em JS nativo | Campos vazios/espaços, e-mail inválido, sucesso sem recarga; pesquisa vazia/sem resultado |
 | 16/11 | 4 | Robustez dos favoritos, imagens e acessibilidade; preservar filtro jQuery | Armazenamento inválido/indisponível, foco na remoção, imagens e licenças |
 | 16/11 | 5 | Playwright, testes manuais e correções | Abertura, navegação, formulário, filtros, favoritos, teclado e responsividade |
 | 17/11 | 6 | Documentação final e preparação da defesa | Registros coerentes com testes reais; suíte completa e estudo da defesa |
@@ -43,3 +43,9 @@ Preparar README, TESTES, ACESSIBILIDADE, AUDITORIA, IA e IMPLEMENTACAO. Conferir
 ## Ambiente e pendências
 
 Node/npm não foram encontrados no PATH em 14/11. Localizar instalação ou instalar Node LTS compatível (22 ou superior) antes de testar o servidor Node e instalar Playwright. O `package-lock.json` será gerado com as dependências da suíte; até lá não há dependências npm nem comando `npm test`.
+
+## Progresso em 15/11/2026
+
+Etapas 2 e 3 implementadas e verificadas por testes pontuais automatizados de layout, Bootstrap, contato e pesquisa. O commit inicial aplicado na branch compatível com main é ff1f072: o conteúdo foi trabalhado em 14/11, e o commit foi recriado em 15/11 para corrigir o histórico de PR. O estudante explicará essa distinção ao professor. Não alterar datas para simular distribuição.
+
+Node 24.22.1 foi localizado no runtime e usado para executar o servidor; não houve instalação global ou mudança do PATH. A suíte reproduzível, com dependência de desenvolvimento e lockfile, permanece para 16/11.

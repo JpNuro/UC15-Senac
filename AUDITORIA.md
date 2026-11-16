@@ -81,11 +81,15 @@ As correções abaixo correspondem à base inicial de 14/11/2026. Conferência e
 - Impacto: sua mensagem seria omitida ao montar dados por nome.
 - Correção aplicada: textarea em contato inclui `name="mensagem"`, label correspondente e required. O projeto fará somente simulação, sem envio de dados.
 
-## Ocorrências adicionais a resolver
+## Ocorrências adicionais e acompanhamento
 
 - Os scripts próprios aparecem antes de jQuery no esqueleto; se usados imediatamente, podem executar antes da biblioteca. A base reaproveitada já carrega jQuery antes de app.js. Conferir novamente após integrar as cópias locais.
-- O esqueleto referencia `js/bootstrap.min.js`, mas a estrutura exige `js/bootstrap.bundle.min.js`. O bundle local será integrado em 15/11 junto ao accordion, com a licença preservada. Não declarar essa correção concluída nesta etapa.
+- O esqueleto referencia `js/bootstrap.min.js`, mas a estrutura exige `js/bootstrap.bundle.min.js`. Correção concluída em 15/11: bundle local em assets/vendor/bootstrap.bundle.min.js, usado no accordion, com licença preservada.
 
 ## Cuidados de interpretação
 
 `novalidate` não é erro por si só: exige validação própria funcional. PNG também não é erro isolado, e não foi presumido que o arquivo citado existe. Não contar esses detalhes como inconsistências corrigidas sem evidência. Auditoria estrutural e testes de comportamento são evidências complementares.
+
+## Validação complementar em 15/11/2026
+
+Formulário passou a tratar submit sem recarga, com erros por campo e status. A substituição da validação nativa só ocorre depois de conectar esse tratamento; required, type=email e rótulos permanecem no HTML. Pesquisa de eventos e accordion foram verificados em navegador automatizado. Resultados e limites estão em TESTES.md.

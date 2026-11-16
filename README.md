@@ -2,9 +2,9 @@
 
 Portal demonstrativo de serviços, eventos e notícias de uma comunidade esportiva. Todos os serviços, locais, notícias, jogos e resultados são fictícios; não há inscrições nem atendimento real.
 
-## Estado atual — 14/11/2026
+## Estado atual — 15/11/2026
 
-Versão intermediária `0.1.0`, base do primeiro dos sete commits da recuperação, revista em 15/11. Há quatro páginas na raiz: início, eventos, contato e favoritos. O filtro de notícias usa jQuery; favoritos usam JavaScript e `localStorage`. A página de eventos apresenta o catálogo; a pesquisa será acrescentada em 15/11. O contato permanece com envio desabilitado até implementar a validação e simulação na mesma data.
+Versão intermediária `0.2.0`, com as etapas de layout e interações de 15/11 concluídas. Há quatro páginas na raiz: início, eventos, contato e favoritos. O filtro de notícias usa jQuery; favoritos usam JavaScript e `localStorage`. A pesquisa de eventos aceita título, modalidade e local sem diferenciar acentos ou maiúsculas. O contato valida nome, e-mail e mensagem, mostra erros por campo e simula envio sem recarregar nem armazenar dados pessoais. Sem JavaScript, o botão permanece desabilitado.
 
 Não há backend, banco de dados, APIs externas ou CMS. Nenhum dado de contato será armazenado ou enviado.
 
@@ -16,7 +16,7 @@ Com Node.js 22 ou superior:
 npm start
 ```
 
-Abra **http://127.0.0.1:4321**. Encerre com Ctrl+C. Não há dependências npm nesta etapa; não é necessário instalar pacotes para iniciar o servidor. Node e npm não estão disponíveis no PATH da sessão de implementação; a execução deste comando ainda precisa ser verificada.
+Abra **http://127.0.0.1:4321**. Encerre com Ctrl+C. Não há dependências npm nesta etapa; não é necessário instalar pacotes para iniciar o servidor. Node/npm não estão no PATH desta sessão; o servidor foi verificado usando Node 24.22.1 localizado no runtime. Em outra máquina, instale Node 22 ou superior para usar o comando acima.
 
 Alternativa temporária com Python 3, apenas na máquina local:
 
@@ -29,17 +29,17 @@ O servidor Python serve toda a pasta, inclusive documentos; não o exponha à re
 ## Organização
 
 - `index.html`: apresentação, serviços e notícias, calendário e classificação demonstrativos.
-- `eventos.html`: catálogo de atividades comunitárias.
-- `contato.html`: estrutura do formulário demonstrativo.
+- `eventos.html`: catálogo de atividades comunitárias com pesquisa.
+- `contato.html`: formulário acessível com validação e envio simulado.
 - `favoritos.html`: notícias salvas no navegador.
-- `assets/css/style.css`, `assets/img/` e `js/app.js`: estilos, imagens e interações reaproveitados.
+- `assets/css/style.css`, `assets/img/` e `js/app.js`: estilos, imagens e interações reaproveitados. `js/contato.js` e `js/eventos.js` isolam as novas funções por página.
 - `scripts/servir.mjs`: servidor local sem dependências de produção.
 
 O material do professor em `aula-frontend-mobile-limpo/`, o enunciado original e `texto.md` são fontes locais de consulta ignoradas pelo Git. Não fazem parte do portal a publicar.
 
 ## Tecnologias e limites
 
-HTML semântico, CSS próprio, JavaScript no navegador, Bootstrap 5.3.8 e jQuery 4.0.0. Nesta versão, as bibliotecas ainda vêm de CDN e dependem de conexão; serão substituídas pelas cópias locais licenciadas das aulas em 15/11. O accordion Bootstrap também será integrado nessa etapa.
+HTML semântico, CSS próprio, JavaScript no navegador, Bootstrap 5.3.8 e jQuery 4.0.0. As bibliotecas são locais, em `assets/vendor/`, com licenças preservadas do material das aulas. O accordion de perguntas frequentes usa o bundle Bootstrap; o filtro de notícias usa jQuery. Nenhuma dessas interações depende de CDN.
 
 Favoritos são locais ao navegador e não sincronizam entre dispositivos. A validação dos itens armazenados e o foco após remoção serão revisados em 16/11. Não há comprovação de conformidade integral de acessibilidade, compatibilidade ou desempenho.
 
@@ -55,7 +55,7 @@ As cinco imagens JPG foram reaproveitadas do projeto anterior. A origem e a lice
 | noticia-basquete.jpg | Pendente | Não liberada para entrega final |
 | noticia-formula-1.jpg | Pendente | Não liberada para entrega final |
 
-Código do projeto sob MIT, conforme `LICENSE`. As licenças das bibliotecas serão preservadas nas cópias locais.
+Código do projeto sob MIT, conforme `LICENSE`. As licenças MIT das bibliotecas estão em `assets/vendor/bootstrap-LICENSE.txt` e `assets/vendor/jquery-LICENSE.txt`.
 
 ## Testes e acompanhamento
 

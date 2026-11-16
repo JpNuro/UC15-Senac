@@ -21,3 +21,24 @@ Os estilos de foco, cores e preferência por movimento reduzido foram reaproveit
 | Imagens | Conferir finalidade, alt e conteúdo visual | Alternativas adequadas e dimensões corretas | Pendente |
 
 Registrar navegador, data, etapa testada, resultado e reteste após as correções. Não substituir zoom real por simples mudança de viewport.
+
+## Atualização de 15/11/2026 — layout
+
+CSS com foco global, bordas de campos mais contrastantes, navegação com alvos de pelo menos 44 px de altura e preferência por movimento reduzido preservada. Chromium headless confirmou ausência de overflow nas quatro páginas em 320, 768 e 1280 px. Accordion testado por Enter/Espaço, com estado aria-expanded coerente. Resultados automatizados em TESTES.md; a tabela de verificações manuais não está automaticamente aprovada.
+
+## Atualização de 15/11/2026 — formulário, pesquisa e cores
+
+Erros do formulário associados por aria-describedby, aria-invalid e texto explícito. Primeiro campo inválido recebe foco. Status anuncia resultado do formulário e quantidade de eventos. Testes automatizados confirmaram foco, correção dos estados, envio por Enter e link de salto; captura do contato em 320 px foi inspecionada.
+
+Contrastes calculados pela luminância relativa sRGB das cores CSS (não uma auditoria completa de todos os estados):
+
+| Uso | Cores | Razão |
+| --- | --- | --- |
+| Texto / superfície | #f5f5f5 / #1c2028 | 14,97:1 |
+| Texto secundário / superfície | #b8c0cc / #1c2028 | 8,90:1 |
+| Link / fundo e texto / botão | #ff6b35 / #111318 | 6,55:1 |
+| Erro / superfície | #ff9999 / #1c2028 | 7,98:1 |
+| Borda de campo / interior | #707b8c / #111318 | 4,34:1 |
+| Foco / superfície | #ffb18f / #1c2028 | 9,28:1 |
+
+Zoom real de 200%, leitor de tela, contraste de estados adicionais e navegação manual completa continuam pendentes. Não foram marcados como realizados pelo estudante.

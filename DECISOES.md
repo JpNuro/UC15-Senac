@@ -10,22 +10,22 @@ Portal na raiz para facilitar publicação sem pasta intermediária. Preservar `
 
 ## Responsabilidades das tecnologias
 
-- JavaScript nativo: favoritos já existentes; formulário e pesquisa de eventos a implementar.
+- JavaScript nativo: favoritos já existentes; formulário e pesquisa de eventos implementados em scripts próprios por página.
 - jQuery: filtro de notícias já existente, isolado e sem duplicar outras funções.
-- Bootstrap: estilos existentes; accordion de perguntas frequentes planejado, controlado apenas pelo bundle.
+- Bootstrap: estilos existentes; accordion de perguntas frequentes integrado, controlado apenas pelo bundle.
 
-As cópias locais de Bootstrap 5.3.8 e jQuery 4.0.0 e suas licenças estão no material fornecido e serão integradas em 15/11. Não trocar versões sem necessidade verificada.
+As cópias locais de Bootstrap 5.3.8 e jQuery 4.0.0 e suas licenças estão no material fornecido e foram integradas em 15/11. Não trocar versões sem necessidade verificada.
 
 ## Dados e acessibilidade
 
 Favoritos continuam em `sportsCentralFavoritos`; preservar compatibilidade com os itens existentes ao acrescentar validação. Usar criação de elementos e `textContent`, não interpretar conteúdo armazenado como HTML. Tratar indisponibilidade de armazenamento e foco após remoção em 16/11.
 
-Contato não salva dados pessoais nem realiza envio real. Enquanto a validação e a simulação não existem, manter submit desabilitado; habilitá-lo apenas com tratamento do evento submit, inclusive envio por Enter. Validar nome e mensagem após trim e e-mail usando validade do campo HTML.
+Contato não salva dados pessoais nem realiza envio real. O botão começa desabilitado no HTML e só é habilitado após conectar o tratamento de submit, inclusive envio por Enter. Validar nome e mensagem após trim e e-mail usando validade do campo HTML.
 
 Link de salto presente em todas as páginas, destino focável, rótulos associados e indicação da página atual. Verificações visuais e de teclado ainda pendentes.
 
 ## Execução e processo
 
-Servidor local Node sem dependências de produção, restrito aos recursos do portal e a loopback. Node 22 ou superior é a base escolhida. Node/npm ainda precisam ser disponibilizados no ambiente e o servidor testado.
+Servidor local Node sem dependências de produção, restrito aos recursos do portal e a loopback. Node 22 ou superior é a base escolhida. Node/npm não estão no PATH, mas foi localizado Node 24.22.1 no runtime e o servidor foi executado com ele.
 
 Sete commits em quatro datas reais, começando pelo commit revisto de organização do portal; `38f8446` fica fora da contagem; calendário em PLANEJAMENTO. Não antecipar histórico nem declarar testes e publicação que não ocorreram.

@@ -37,3 +37,21 @@ Inspeção estrutural das quatro páginas aprovada, com 40 referências locais v
 ## Próximas atualizações
 
 Após cada etapa do cronograma, registrar aqui o comportamento entregue, o motivo das escolhas, validações e limitações. Não registrar itens futuros como concluídos. O detalhe dos resultados fica em TESTES e ACESSIBILIDADE para evitar divergências entre relatos.
+
+## 15/11/2026 — layout e dependências (commit 2)
+
+CSS reorganizado em base mobile first e expansões em 768 e 1024 px. Removidas regras antigas duplicadas, regras de campos do cadastro retirado e container query que tentava estilizar o próprio contêiner. Flexbox organiza a navegação e Grid distribui notícias, eventos e favoritos. Os eventos têm uma, duas ou três colunas conforme o espaço. O foco agora é visível também em botões fora do formulário; as bordas de controles receberam maior contraste.
+
+Bootstrap 5.3.8 e jQuery 4.0.0 foram copiados do material das aulas para assets/vendor, com licenças MIT preservadas. Não há mais chamadas a CDN no HTML. Um accordion de perguntas frequentes na página inicial demonstra Bootstrap: apenas o bundle controla a expansão, via atributos data-bs. O filtro de notícias continua isolado em jQuery.
+
+Node 24.22.1 e Playwright foram encontrados no runtime local. Foi baixado Chromium Headless Shell para a pasta .cache ignorada pelo Git. O servidor Node foi executado e os testes pontuais passaram em 12 combinações de página/largura (320, 768 e 1280 px), sem overflow. Confirmadas as colunas dos eventos, accordion com Enter/Espaço e filtro jQuery, sem erros JS ou respostas HTTP de erro. Capturas de início mobile e eventos desktop foram inspecionadas. Isso não substitui zoom real, leitor de tela ou testes manuais pelo estudante.
+
+## 15/11/2026 — contato e pesquisa (commit 3)
+
+Criados scripts específicos de página: js/contato.js e js/eventos.js. Isso evita carregar a lógica de contato ou pesquisa onde ela não é usada, sem misturá-la ao filtro jQuery e aos favoritos existentes.
+
+O formulário habilita o botão apenas depois de conectar o tratamento de submit. Nome, e-mail e mensagem não podem conter apenas espaços; o e-mail também usa a verificação de formato do próprio campo HTML. Cada erro fica ligado ao campo por aria-describedby e aria-invalid; o primeiro inválido recebe foco e uma região de status anuncia erro ou sucesso. A submissão por clique e Enter passa pelo mesmo evento. Valores são preservados para revisão, sem envio real nem armazenamento. Sem JavaScript, o envio continua bloqueado com explicação em noscript.
+
+A pesquisa de eventos usa o catálogo já presente em HTML, inclusive títulos, descrições, modalidades e locais. A normalização remove diferenças de maiúsculas e acentos; hidden controla visibilidade e a região de status informa a quantidade ou nenhum resultado. Limpar o campo restaura a lista. Sem JavaScript, os três eventos permanecem disponíveis.
+
+A versão passa a 0.2.0. Os testes pontuais de contato, pesquisa, fallback e salto passaram no Chromium; as 12 combinações de layout e o accordion foram testados novamente após as mudanças. Permanecem pendentes a suíte entregue e reproduzível, imagens/licenças, robustez de favoritos e publicação, conforme os próximos dias do plano.
