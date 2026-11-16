@@ -15,8 +15,8 @@
 | 14/11 | 1 — inicial, revisto em 15/11 | Portal na raiz, páginas, conteúdo, navegação, auditoria e execução local | Caminhos, âncoras, rótulos e integridade da movimentação |
 | 15/11 | 2 — 736bb5c | CSS a partir de 320 px; breakpoints 768 e 1024 px; Flexbox, Grid; dependências locais; accordion Bootstrap | 320, 768 e 1280 px; teclado no componente |
 | 15/11 | 3 — e3ff577 | Validação de contato e pesquisa de eventos em JS nativo | Campos vazios/espaços, e-mail inválido, sucesso sem recarga; pesquisa vazia/sem resultado |
-| 16/11 | 4 — concluído nesta etapa | Robustez dos favoritos, imagens e acessibilidade; preservar filtro jQuery | Armazenamento inválido/indisponível, foco na remoção, imagens e licenças |
-| 16/11 | 5 | Playwright, testes manuais e correções | Abertura, navegação, formulário, filtros, favoritos, teclado e responsividade |
+| 16/11 | 4 — ca53d6f | Robustez dos favoritos, imagens e acessibilidade; preservar filtro jQuery | Armazenamento inválido/indisponível, foco na remoção, imagens e licenças |
+| 16/11 | 5 — suíte concluída | Playwright, testes manuais e correções | Abertura, navegação, formulário, filtros, favoritos, teclado e responsividade |
 | 17/11 | 6 | Documentação final e preparação da defesa | Registros coerentes com testes reais; suíte completa e estudo da defesa |
 | 17/11 | 7 | Configuração de publicação e pacote final | HTTPS, navegação e conteúdo do pacote |
 
@@ -53,3 +53,7 @@ Node 24.22.1 foi localizado no runtime e usado para executar o servidor; não ho
 ## Ajuste de organização em 16/11
 
 Atendendo à revisão do estudante, o commit 4 inclui adequação a css/, js/ e img/, documentos complementares em docs/, imagens responsivas com srcset/sizes e robustez dos favoritos. Sem commit adicional ao total de sete. O commit 5 entrega a suíte reproduzível.
+
+## Fechamento de 16/11
+
+Organização, favoritos, imagens, acessibilidade e suíte Playwright concluídos. 35 testes aprovados, com instalação reproduzível por npm ci e verificações de teclado, capturas e zoom real. O estudante informou revisão de código; a ferramenta configurou e executou os testes, conforme declarado em IA.md. Restam para 17/11 apenas os commits 6 e 7 previstos: documentação de entrega/defesa e publicação/pacote/tag.

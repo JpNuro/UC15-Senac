@@ -65,3 +65,13 @@ Favoritos mantêm a chave e os IDs antigos. Dados são validados e deduplicados;
 As fotografias sem comprovação de licença saíram da entrega. Foram criadas cinco ilustrações geométricas SVG e rasterizadas com Sharp em WebP de 400, 800 e 1200 px, qualidade 82. Fontes SVG incluídas sob MIT. Quinze arquivos totalizam 93.724 bytes. HTML e favoritos usam srcset/sizes; o navegador escolheu 400 px no mobile e 1200 px no desktop com DPR 1. Não houve alteração por CSS a partir de srcset: CSS e sizes descrevem o mesmo layout para finalidades diferentes.
 
 Testes pontuais de favoritos, falhas, imagens, layout, formulário, filtros e accordion passaram; resultados em TESTES.md. A suíte versionada e executável em clone limpo será incluída no commit 5, também em 16/11. Revisões manuais pelo estudante continuam registradas separadamente.
+
+## 16/11/2026 — suíte reproduzível (commit 5)
+
+Adicionados @playwright/test 1.62.1 como dependência de desenvolvimento, package-lock.json, playwright.config.js e tests/portal.spec.js. A configuração inicia o servidor local e impede uso acidental de testes marcados como exclusivos. A suíte usa contextos isolados, dois workers e gera relatório HTML, capturas e traces de falhas fora do Git.
+
+npm ci foi executado antes da suíte. Os 35 casos cobrem páginas, links, três larguras, salto, todos os controles por teclado, formulário, pesquisas, persistência e falhas dos favoritos, imagens responsivas, Bootstrap, ausência de JavaScript, restrições do servidor e zoom real de 200%. A interface nativa de configurações do Chromium define o zoom; o teste confirma escala e largura lógica. Capturas das quatro páginas nas três larguras e da tela ampliada foram inspecionadas com apoio da ferramenta.
+
+O primeiro teste de accordion precisou aguardar o fim da animação; o teste de zoom deixou de usar uma preferência não aplicada e passou a usar a configuração nativa. A captura de zoom usa o protocolo do Chromium para evitar recorte de fullPage. Os resultados finais e os limites estão em TESTES.md. O estudante informou que revisou os códigos; configuração e execução dos testes foram feitas pela ferramenta, conforme IA.md.
+
+A versão passa a 0.4.0. Hoje foram concluídos os commits 4 e 5; documentação final de entrega, publicação e tag permanecem no dia 17, conforme o cronograma.

@@ -23,6 +23,10 @@
 
 São medições matemáticas das cores definidas, não auditoria completa de todos os estados. Histórico em docs/HISTORICO-ACESSIBILIDADE.md.
 
-## Pendências manuais
+## Verificação concluída em 16/11
 
-Percorrer as quatro páginas com teclado, verificar foco em todos os estados e adequação dos textos alternativos, aplicar zoom real de 200% e conferir leitura das mensagens com tecnologia assistiva. Registrar os resultados em TESTES.md. Automação e capturas não comprovam conformidade integral nem execução manual pelo estudante.
+A ferramenta executou os roteiros de teclado e interação e a inspeção visual assistida das quatro páginas em três larguras. A suíte percorreu todos os controles por Tab, verificando ordem e foco visível, e conferiu o zoom real de 200% pelo controle nativo do Chromium, com ausência de overflow nas quatro páginas e uso do formulário ampliado. Capturas de layout e zoom foram inspecionadas. Dados inválidos, falhas de armazenamento e foco após remoção dos favoritos foram testados.
+
+Os textos alternativos foram conferidos com as ilustrações de estádio, futebol, treinamento, basquete e automobilismo. Eles descrevem as ilustrações, sem apresentá-las como fotografias. O estudante informou a revisão do código; a configuração e execução dos testes foram feitas com apoio da IA. Resultados, passos e retestes em TESTES.md.
+
+Essas verificações cobrem o escopo do projeto no Chromium testado e não representam certificação integral de WCAG nem avaliação com todos os leitores de tela ou navegadores.
