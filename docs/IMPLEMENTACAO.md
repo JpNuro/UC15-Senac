@@ -81,3 +81,13 @@ A versão passa a 0.4.0. Hoje foram concluídos os commits 4 e 5; documentação
 Revisados os documentos obrigatórios contra o código e os testes atuais. A auditoria agora descreve no passado as correções de teclado, imagens e validação já concluídas. docs/ENTREGA.md relaciona os dez critérios de avaliação às evidências, sem atribuir nota ou presumir domínio demonstrado. O guia pessoal de defesa fica apenas em .estudo/, fora do Git.
 
 A branch foi avançada por fast-forward até a main já integrada pelo estudante, sem criar outro merge nem mudar o conteúdo. Foram executados npm ci e a suíte completa: 35 testes aprovados em 13,0 s, com saída zero. A documentação registra a autoria da execução dos testes como apoio da ferramenta. A implantação, pacote e versão final ficam no commit 7.
+
+## 17/11/2026 — publicação e pacote final (commit 7)
+
+Versão 1.0.0 definida em package.json e lockfile. scripts/preparar-publicacao.mjs recria apenas dist/site, copia páginas e recursos de uma lista explícita e inclui as licenças e versao.json. Documentos internos e guias pessoais não são publicados. O build verifica as referências locais, inclusive srcset.
+
+.github/workflows/publicar.yml executa npm ci e a suíte no Ubuntu, prepara o artefato e usa as ações oficiais de GitHub Pages. scripts/verificar-publicacao.mjs aguarda a versão exata do commit e confere as quatro páginas, recursos, licenças e abertura do portal na raiz, exigindo HTTPS fora de localhost. A configuração do Pages usa GitHub Actions; o resultado de implantação é registrado pela execução do workflow.
+
+scripts/empacotar.py usa somente blobs dos arquivos versionados, recusa alterações locais e links, gera ZIP com manifesto de hashes e confere a integridade. O pacote não contém .git, dependências instaladas, cache, guias pessoais ou arquivos locais de consulta. A tag final identifica o commit de origem, sem alterar datas do histórico.
+
+Antes do commit, o build foi servido em loopback e suas quatro páginas e 30 recursos responderam corretamente; a lista de arquivos públicos foi conferida. A verificação HTTPS e os testes da publicação são executados após a implantação. O manifesto do pacote e o workflow registram a referência exata, evitando declarar como entregue um conteúdo diferente do versionado.

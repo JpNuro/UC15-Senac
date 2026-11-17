@@ -1,4 +1,4 @@
-# Testes — versão 0.4.0, 16/11/2026
+# Testes — entrega 1.0.0, registros de 16 e 17/11/2026
 
 ## Responsabilidade e ambiente
 
@@ -46,3 +46,11 @@ Instruções reproduzíveis no README. Histórico de etapas anteriores em docs/H
 ## Revalidação de 17/11/2026
 
 npm ci executado a partir do lockfile; nenhum problema de integridade de dependências. Suíte completa repetida antes do fechamento: **35 testes aprovados em 13,0 s, saída 0**. Escopo funcional igual ao da tabela acima. Execução realizada com apoio da ferramenta; não foi atribuída ao estudante. A validação HTTPS e do pacote será registrada na etapa de publicação deste dia.
+
+## Build, publicação e pacote — 17/11/2026
+
+O build público foi servido em loopback: quatro páginas e 30 recursos locais retornaram HTTP 200, com versão e commit coerentes com o build. A saída foi conferida contra uma lista explícita: HTML, css/, js/, img/, licenças, LICENSE, .nojekyll e versao.json. Documentos, testes e guias pessoais ficaram fora do artefato.
+
+Na publicação, o workflow executa a mesma suíte, implanta o artefato e roda verificar:publicacao. Essa etapa verifica HTTPS, raiz do portal, páginas, recursos e a igualdade entre versao.json e o commit da execução. A evidência da implantação e seu resultado são os logs da execução: https://github.com/JpNuro/UC15-Senac/actions/workflows/publicar.yml.
+
+O empacotador testa a integridade do ZIP e compara o SHA-256 de cada entrada com o manifesto construído dos blobs do commit. O resumo do pacote fica ao lado do ZIP em dist/. Esses artefatos são gerados após o commit final e ficam fora do versionamento para não criar autorreferência ou um oitavo commit apenas para arquivos gerados.

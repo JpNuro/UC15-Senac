@@ -17,8 +17,8 @@
 | 15/11 | 3 — e3ff577 | Validação de contato e pesquisa de eventos em JS nativo | Campos vazios/espaços, e-mail inválido, sucesso sem recarga; pesquisa vazia/sem resultado |
 | 16/11 | 4 — ca53d6f | Robustez dos favoritos, imagens e acessibilidade; preservar filtro jQuery | Armazenamento inválido/indisponível, foco na remoção, imagens e licenças |
 | 16/11 | 5 — 224a602 | Playwright, testes manuais e correções | Abertura, navegação, formulário, filtros, favoritos, teclado e responsividade |
-| 17/11 | 6 — documentação revisada | Documentação final e preparação da defesa | Registros coerentes com testes reais; suíte completa e estudo da defesa |
-| 17/11 | 7 | Configuração de publicação e pacote final | HTTPS, navegação e conteúdo do pacote |
+| 17/11 | 6 — 6ada9dc | Documentação final e preparação da defesa | Registros coerentes com testes reais; suíte completa e estudo da defesa |
+| 17/11 | 7 — versão 1.0.0 | Configuração de publicação e pacote final | HTTPS, navegação e conteúdo do pacote |
 
 Criar a tag `v1.0.0` no commit final após conferir a publicação. Registrar a URL somente depois de abri-la e verificar o portal.
 
@@ -61,3 +61,7 @@ Organização, favoritos, imagens, acessibilidade e suíte Playwright concluído
 ## Preparação de 17/11
 
 Documentos confrontados com a versão atual, retiradas anotações antigas que tratavam correções concluídas como futuras. Matriz de evidências em docs/ENTREGA.md e guia local de prática para a defesa em .estudo/06-defesa.md. npm ci e os 35 testes foram executados novamente, com código de saída zero. Publicação e pacote são a etapa final deste mesmo dia.
+
+## Fechamento técnico de 17/11
+
+Commit 6: revisão documental e revalidação com 35 aprovações. Commit 7: versão 1.0.0, build com lista de arquivos públicos, workflow de testes/publicação/conferência do commit publicado e empacotador com manifesto de hashes. Publicação preparada para main sem force-push, preservando as integrações existentes. O registro efetivo da implantação fica no workflow; o pacote final identifica seu commit de origem.

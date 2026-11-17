@@ -31,3 +31,5 @@ Em 16/11, a ferramenta configurou a suíte Playwright reproduzível, executou os
 ## Fechamento em 17/11/2026
 
 A ferramenta apoiou a revisão dos documentos de entrega e a reexecução de npm ci e dos 35 testes completos, preservando o registro das orientações e revisões do estudante.
+
+No fechamento técnico, a ferramenta também apoiou os scripts de build, verificação da publicação e empacotamento, a configuração do GitHub Pages e os registros de execução. As instruções e os artefatos permitem reproduzir os testes e conferir a referência publicada; não representam defesa individual já realizada.

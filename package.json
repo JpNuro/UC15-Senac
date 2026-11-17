@@ -1,6 +1,6 @@
 {
   "name": "sports-central-uc15",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "description": "Portal demonstrativo da comunidade esportiva — recuperação UC15.",
@@ -10,7 +10,10 @@
   "scripts": {
     "start": "node scripts/servir.mjs",
     "test": "playwright test",
-    "test:report": "playwright show-report"
+    "test:report": "playwright show-report",
+    "build": "node scripts/preparar-publicacao.mjs",
+    "verificar:publicacao": "node scripts/verificar-publicacao.mjs",
+    "empacotar": "python scripts/empacotar.py"
   },
   "devDependencies": {
     "@playwright/test": "1.62.1"

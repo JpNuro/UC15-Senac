@@ -4,7 +4,7 @@ Portal mobile first de serviços, eventos e notícias de uma comunidade esportiv
 
 ## Estado atual — 17/11/2026
 
-Versão 0.4.0. Quatro páginas navegáveis, layout a partir de 320 px, accordion Bootstrap, pesquisa de notícias com jQuery, pesquisa de eventos com JavaScript, contato validado com envio simulado e favoritos no navegador. As imagens têm versões WebP e srcset/sizes, incluindo os favoritos. Publicação HTTPS e tag final estão previstas para 17/11.
+Versão final 1.0.0. Quatro páginas navegáveis, layout a partir de 320 px, accordion Bootstrap, pesquisa de notícias com jQuery, pesquisa de eventos com JavaScript, contato validado com envio simulado e favoritos no navegador. As imagens têm versões WebP e srcset/sizes, incluindo os favoritos. Entrega organizada para publicação HTTPS e tag v1.0.0.
 
 ## Organização
 
@@ -28,7 +28,7 @@ UC15-Senac/
 ├── tests/portal.spec.js
 ├── playwright.config.js
 ├── package-lock.json
-├── scripts/servir.mjs
+├── scripts/             # servidor, build, conferência HTTPS e pacote
 ├── README.md
 ├── TESTES.md
 ├── ACESSIBILIDADE.md
@@ -95,4 +95,29 @@ A matriz de evidências para os critérios de avaliação está em [docs/ENTREGA
 
 ## Publicação e entrega
 
-URL HTTPS e tag v1.0.0: pendentes. A publicação deve conter apenas os HTMLs e css/, js/ e img/; o pacote de entrega também inclui documentação e testes, sem .git, node_modules ou cache. Fontes locais de consulta (aula-frontend-mobile-limpo/, enunciado e texto.md) são ignoradas pelo Git e não fazem parte da publicação.
+Portal: **https://jpnuro.github.io/UC15-Senac/**. Repositório: https://github.com/JpNuro/UC15-Senac. Referência final: tag **v1.0.0**, no sétimo commit de desenvolvimento. Os merges de integração ficam preservados no histórico.
+
+O workflow [Publicar portal UC15](https://github.com/JpNuro/UC15-Senac/actions/workflows/publicar.yml) executa os testes, prepara dist/site e publica pelo GitHub Pages a partir de main. A etapa final confere o endereço, as quatro páginas, os recursos e versao.json, exigindo que a versão e o commit publicados coincidam com o código da execução. Consulte o resultado dessa etapa para a evidência de implantação.
+
+O artefato público contém somente HTML, css/, js/, img/, licenças e o identificador de versão. Documentos de avaliação, testes, fontes locais de consulta, cache e guias de estudo não entram no site. A configuração segue o fluxo oficial de [workflows do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+### Preparar publicação e conferir a URL
+
+```sh
+npm run build
+npm run verificar:publicacao
+```
+
+O build recria apenas dist/site. A conferência remota exige que o site já tenha sido implantado a partir do mesmo commit local; ela não publica alterações nem aceita uma versão antiga como sucesso.
+
+### Gerar o pacote de entrega
+
+Com Git e Python 3.10 ou superior disponíveis, depois do commit final:
+
+```sh
+npm run empacotar
+```
+
+O pacote fica em **dist/sports-central-uc15-v1.0.0.zip**, acompanhado de SHA-256. Inclui código, documentos, testes, configuração e licenças, diretamente dos arquivos versionados no commit. Não inclui .git, node_modules, .cache, .estudo, relatórios temporários, materiais das aulas, enunciado local ou texto.md. CONFERENCIA-ENTREGA.json informa o commit e o hash de cada arquivo. O empacotador recusa arquivos versionados com alterações locais e verifica a integridade do ZIP.
+
+Na defesa, o estudante deve conseguir explicar as escolhas, executar e interpretar um teste e realizar uma alteração simples. A documentação e os testes com apoio da ferramenta não substituem essa demonstração individual.
