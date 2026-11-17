@@ -27,3 +27,7 @@ Um erro de codificação de caracteres introduzido durante a edição foi identi
 A utilização da ferramenta não substitui minha responsabilidade por compreender, explicar, testar e modificar o que será apresentado. O código não contém assinaturas da ferramenta. Esta declaração permanece versionada porque é exigida na recuperação; os guias pessoais de estudo ficam fora do Git.
 
 Em 16/11, a ferramenta configurou a suíte Playwright reproduzível, executou os testes de navegador, realizou inspeção visual assistida das capturas e verificou o zoom real de 200%. Os testes e seus retestes estão declarados como apoio da IA. O README e os guias locais explicam como repetir a execução e interpretar o resultado para estudo e preparação da defesa.
+
+## Fechamento em 17/11/2026
+
+A ferramenta apoiou a revisão dos documentos de entrega e a reexecução de npm ci e dos 35 testes completos, preservando o registro das orientações e revisões do estudante.

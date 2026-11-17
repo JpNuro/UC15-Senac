@@ -42,3 +42,7 @@ Capturas completas das quatro páginas em 320, 768 e 1280 px foram inspecionadas
 - Foram acrescentados quatro casos de percurso completo de foco; a suíte ampliada terminou com 35 aprovações.
 
 Instruções reproduzíveis no README. Histórico de etapas anteriores em docs/HISTORICO-TESTES.md; as antigas pendências de testes são substituídas pelos resultados atuais deste arquivo. Publicação HTTPS é a etapa de 17/11 e terá conferência própria após implantação.
+
+## Revalidação de 17/11/2026
+
+npm ci executado a partir do lockfile; nenhum problema de integridade de dependências. Suíte completa repetida antes do fechamento: **35 testes aprovados em 13,0 s, saída 0**. Escopo funcional igual ao da tabela acima. Execução realizada com apoio da ferramenta; não foi atribuída ao estudante. A validação HTTPS e do pacote será registrada na etapa de publicação deste dia.

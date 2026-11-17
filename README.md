@@ -2,7 +2,7 @@
 
 Portal mobile first de serviços, eventos e notícias de uma comunidade esportiva. Conteúdos e locais fictícios, sem inscrições nem atendimento real. Projeto exclusivamente de interface, sem backend, banco, APIs externas ou CMS.
 
-## Estado atual — 16/11/2026
+## Estado atual — 17/11/2026
 
 Versão 0.4.0. Quatro páginas navegáveis, layout a partir de 320 px, accordion Bootstrap, pesquisa de notícias com jQuery, pesquisa de eventos com JavaScript, contato validado com envio simulado e favoritos no navegador. As imagens têm versões WebP e srcset/sizes, incluindo os favoritos. Publicação HTTPS e tag final estão previstas para 17/11.
 
@@ -87,9 +87,11 @@ O resultado `35 passed` indica que os 35 casos passaram na execução completa. 
 
 ## Validação e documentação
 
-Resultados reais e pendências em [TESTES.md](TESTES.md) e [ACESSIBILIDADE.md](ACESSIBILIDADE.md). A suíte reproduzível foi configurada e executada no commit 5, com 35 casos aprovados. [AUDITORIA.md](AUDITORIA.md) registra as inconsistências do esqueleto; [IA.md](IA.md) declara o apoio utilizado.
+Resultados reais em [TESTES.md](TESTES.md) e [ACESSIBILIDADE.md](ACESSIBILIDADE.md). A suíte reproduzível foi configurada e executada no commit 5, com 35 casos aprovados, repetidos em 17/11. [AUDITORIA.md](AUDITORIA.md) registra as inconsistências do esqueleto; [IA.md](IA.md) declara o apoio utilizado.
 
 Documentos complementares: [planejamento](docs/PLANEJAMENTO.md), [decisões](docs/DECISOES.md) e [implementação e motivos](docs/IMPLEMENTACAO.md). Registros históricos de testes e acessibilidade estão em docs/ e não substituem a avaliação da versão atual.
+
+A matriz de evidências para os critérios de avaliação está em [docs/ENTREGA.md](docs/ENTREGA.md).
 
 ## Publicação e entrega
 

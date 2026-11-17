@@ -23,7 +23,7 @@ As correções abaixo correspondem à base inicial de 14/11/2026. Conferência e
 - Localização: `href="#conteudo"` e main com `id="conteudo-principal"`.
 - Problema: o fragmento não identifica o destino.
 - Impacto: impede pular a navegação repetida.
-- Correção aplicada: link `href="#inicio"` e main `id="inicio" tabindex="-1"` nas quatro páginas; estilo revela o link ao receber foco. Funcionamento por teclado ainda exige teste manual.
+- Correção aplicada: link `href="#inicio"` e main `id="inicio" tabindex="-1"` nas quatro páginas; estilo revela o link ao receber foco. Funcionamento por teclado conferido nos testes de salto e percurso de foco das quatro páginas.
 
 ## 4 — Nome da página de contato incorreto
 
@@ -51,14 +51,14 @@ As correções abaixo correspondem à base inicial de 14/11/2026. Conferência e
 - Localização: imagem do card com `alt="Imagem do evento"`.
 - Problema: não informa o conteúdo específico da imagem.
 - Impacto: alternativa textual oferece pouca informação útil.
-- Correção aplicada: imagens informativas reaproveitadas têm alternativas específicas, como estádio iluminado ou jogadores em treinamento. Não foram adicionadas imagens meramente ilustrativas ao catálogo de eventos. Adequação visual dos textos às fotografias ainda será revisada.
+- Correção aplicada: imagens informativas têm alternativas específicas para as ilustrações de estádio, futebol, treinamento, basquete e automobilismo. As fotografias sem licença comprovada foram substituídas; os textos alternativos foram revistos junto às novas imagens.
 
 ## 8 — Imagem sem dimensões declaradas
 
 - Localização: `<img src="img/evento-exemplo.png" ...>` sem width e height.
 - Problema: o navegador não recebe proporção explícita nesse elemento.
 - Impacto: pode haver deslocamento de conteúdo durante o carregamento.
-- Correção aplicada: imagens estáticas da página inicial preservam width e height, com CSS responsivo. A otimização dos arquivos e conferência de dimensões intrínsecas ficam para a etapa de imagens.
+- Correção aplicada: imagens estáticas da página inicial preservam width e height, com CSS responsivo. Desde 16/11, as versões WebP possuem dimensões intrínsecas de 400×225, 800×450 e 1200×675; srcset/sizes foram incluídos e a seleção efetiva foi testada.
 
 ## 9 — Rótulo do e-mail não corresponde ao campo
 
@@ -72,18 +72,18 @@ As correções abaixo correspondem à base inicial de 14/11/2026. Conferência e
 - Localização: campo de e-mail com `type="text"`.
 - Problema: não declara o propósito e o formato de e-mail.
 - Impacto: perde validação nativa de formato e teclado móvel apropriado.
-- Correção aplicada: `type="email"`, `autocomplete="email"`, name e required em contato. A validação com mensagens próprias será implementada em 15/11.
+- Correção aplicada: `type="email"`, `autocomplete="email"`, name e required em contato. A validação com mensagens próprias foi implementada em 15/11 e conferida na suíte Playwright.
 
 ## 11 — Mensagem sem nome de campo
 
 - Localização: textarea `id="mensagem"` sem `name`.
 - Problema: o campo não tem chave para serialização por APIs de formulário.
 - Impacto: sua mensagem seria omitida ao montar dados por nome.
-- Correção aplicada: textarea em contato inclui `name="mensagem"`, label correspondente e required. O projeto fará somente simulação, sem envio de dados.
+- Correção aplicada: textarea em contato inclui `name="mensagem"`, label correspondente e required. O projeto faz somente simulação, sem envio de dados, conforme verificado pelo teste de ausência de requisições e persistência.
 
 ## Ocorrências adicionais e acompanhamento
 
-- Os scripts próprios aparecem antes de jQuery no esqueleto; se usados imediatamente, podem executar antes da biblioteca. A base reaproveitada já carrega jQuery antes de app.js. Conferir novamente após integrar as cópias locais.
+- Os scripts próprios aparecem antes de jQuery no esqueleto; se usados imediatamente, podem executar antes da biblioteca. O HTML final carrega js/jquery.min.js antes de js/script.js, com defer e ordem preservada. O filtro foi testado com a biblioteca local.
 - O esqueleto referencia `js/bootstrap.min.js`, mas a estrutura exige `js/bootstrap.bundle.min.js`. Correção concluída em 15/11: bundle local em js/bootstrap.bundle.min.js, usado no accordion, com licença preservada.
 
 ## Cuidados de interpretação

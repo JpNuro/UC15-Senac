@@ -16,8 +16,8 @@
 | 15/11 | 2 — 736bb5c | CSS a partir de 320 px; breakpoints 768 e 1024 px; Flexbox, Grid; dependências locais; accordion Bootstrap | 320, 768 e 1280 px; teclado no componente |
 | 15/11 | 3 — e3ff577 | Validação de contato e pesquisa de eventos em JS nativo | Campos vazios/espaços, e-mail inválido, sucesso sem recarga; pesquisa vazia/sem resultado |
 | 16/11 | 4 — ca53d6f | Robustez dos favoritos, imagens e acessibilidade; preservar filtro jQuery | Armazenamento inválido/indisponível, foco na remoção, imagens e licenças |
-| 16/11 | 5 — suíte concluída | Playwright, testes manuais e correções | Abertura, navegação, formulário, filtros, favoritos, teclado e responsividade |
-| 17/11 | 6 | Documentação final e preparação da defesa | Registros coerentes com testes reais; suíte completa e estudo da defesa |
+| 16/11 | 5 — 224a602 | Playwright, testes manuais e correções | Abertura, navegação, formulário, filtros, favoritos, teclado e responsividade |
+| 17/11 | 6 — documentação revisada | Documentação final e preparação da defesa | Registros coerentes com testes reais; suíte completa e estudo da defesa |
 | 17/11 | 7 | Configuração de publicação e pacote final | HTTPS, navegação e conteúdo do pacote |
 
 Criar a tag `v1.0.0` no commit final após conferir a publicação. Registrar a URL somente depois de abri-la e verificar o portal.
@@ -40,9 +40,9 @@ Buscar atendimento completo dos critérios. O mínimo formal é 70 pontos, sem N
 
 Preparar README, TESTES, ACESSIBILIDADE, AUDITORIA, IA e IMPLEMENTACAO. Conferir publicação HTTPS e pacote sem `.git`, materiais de aula, dependências de desenvolvimento e relatórios temporários. Estudar semântica, Flexbox/Grid, responsabilidades das bibliotecas, três correções da auditoria e execução de um teste; praticar uma alteração simples com reteste.
 
-## Ambiente e pendências
+## Ambiente verificado
 
-Node/npm não foram encontrados no PATH em 14/11. Localizar instalação ou instalar Node LTS compatível (22 ou superior) antes de testar o servidor Node e instalar Playwright. O `package-lock.json` será gerado com as dependências da suíte; até lá não há dependências npm nem comando `npm test`.
+Node/npm não estavam no PATH inicial. Foram usados Node 24.22.1 e npm 10.9.4 do runtime/cache local, sem alterar instalação global. O projeto inclui package-lock.json, Playwright 1.62.1 e instruções padrão de instalação. npm ci foi repetido em 17/11; a suíte completa passou com 35 aprovações.
 
 ## Progresso em 15/11/2026
 
@@ -57,3 +57,7 @@ Atendendo à revisão do estudante, o commit 4 inclui adequação a css/, js/ e 
 ## Fechamento de 16/11
 
 Organização, favoritos, imagens, acessibilidade e suíte Playwright concluídos. 35 testes aprovados, com instalação reproduzível por npm ci e verificações de teclado, capturas e zoom real. O estudante informou revisão de código; a ferramenta configurou e executou os testes, conforme declarado em IA.md. Restam para 17/11 apenas os commits 6 e 7 previstos: documentação de entrega/defesa e publicação/pacote/tag.
+
+## Preparação de 17/11
+
+Documentos confrontados com a versão atual, retiradas anotações antigas que tratavam correções concluídas como futuras. Matriz de evidências em docs/ENTREGA.md e guia local de prática para a defesa em .estudo/06-defesa.md. npm ci e os 35 testes foram executados novamente, com código de saída zero. Publicação e pacote são a etapa final deste mesmo dia.

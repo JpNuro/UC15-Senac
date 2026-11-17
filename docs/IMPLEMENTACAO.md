@@ -75,3 +75,9 @@ npm ci foi executado antes da suíte. Os 35 casos cobrem páginas, links, três 
 O primeiro teste de accordion precisou aguardar o fim da animação; o teste de zoom deixou de usar uma preferência não aplicada e passou a usar a configuração nativa. A captura de zoom usa o protocolo do Chromium para evitar recorte de fullPage. Os resultados finais e os limites estão em TESTES.md. O estudante informou que revisou os códigos; configuração e execução dos testes foram feitas pela ferramenta, conforme IA.md.
 
 A versão passa a 0.4.0. Hoje foram concluídos os commits 4 e 5; documentação final de entrega, publicação e tag permanecem no dia 17, conforme o cronograma.
+
+## 17/11/2026 — documentação e preparação da entrega (commit 6)
+
+Revisados os documentos obrigatórios contra o código e os testes atuais. A auditoria agora descreve no passado as correções de teclado, imagens e validação já concluídas. docs/ENTREGA.md relaciona os dez critérios de avaliação às evidências, sem atribuir nota ou presumir domínio demonstrado. O guia pessoal de defesa fica apenas em .estudo/, fora do Git.
+
+A branch foi avançada por fast-forward até a main já integrada pelo estudante, sem criar outro merge nem mudar o conteúdo. Foram executados npm ci e a suíte completa: 35 testes aprovados em 13,0 s, com saída zero. A documentação registra a autoria da execução dos testes como apoio da ferramenta. A implantação, pacote e versão final ficam no commit 7.
